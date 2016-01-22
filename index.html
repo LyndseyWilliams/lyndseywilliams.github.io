@@ -26,7 +26,7 @@ $("button").bind("mousedown", function() {
      window.optimizely.push(["activate", 2781001235]);
     var variationName = window.optimizely.variationNamesMap[2781001235];
     if (!variationName) {
-        logger.error('Experiment is not set up correctly: ', 2781001235);
+        console.log('Experiment is not set up correctly: ', 2781001235);
     }
  });
 </script>
