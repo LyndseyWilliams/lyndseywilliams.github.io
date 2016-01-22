@@ -21,7 +21,8 @@ Beans chicory, in crema half and half a plunger pot milk. Redeye viennese as ski
 
 
 <script type="text/javascript">
-$("button").bind("mousedown", function() {     
+$("button").bind("mousedown", function() { 
+  console.log("click")    
      window.optimizely.push(["activate", 2781001235]);
     var variationName = window.optimizely.variationNamesMap[experimentId];
     if (!variationName) {
