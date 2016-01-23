@@ -1,41 +1,46 @@
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="//cdn.optimizely.com/js/2367300444.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="//cdn.optimizely.com/js/2367300444.js"></script>  
 
 </head>
 
+<body>
+  <p>
+    Roast dripper cup viennese in viennese skinny. Bar, aroma so ristretto café au lait to go espresso roast iced and iced. Half and half crema americano whipped beans seasonal froth. Grounds beans redeye, in caffeine java caffeine lungo.
+  </p>
 
-<p>
-Roast dripper cup viennese in viennese skinny. Bar, aroma so ristretto café au lait to go espresso roast iced and iced. Half and half crema americano whipped beans seasonal froth. Grounds beans redeye, in caffeine java caffeine lungo.
-</p>
+  <p>
+    Cup skinny mug medium lungo variety cortado. Fair trade mocha latte, as, arabica brewed instant mug body. Seasonal, mocha, white, variety to go that at whipped. Cappuccino, flavour strong cinnamon aromatic froth chicory, as milk barista fair trade galão.
+  </p>
 
-<p>
-Cup skinny mug medium lungo variety cortado. Fair trade mocha latte, as, arabica brewed instant mug body. Seasonal, mocha, white, variety to go that at whipped. Cappuccino, flavour strong cinnamon aromatic froth chicory, as milk barista fair trade galão.
-</p>
+  <p>
+    Est dripper, white viennese foam grounds in half and half milk mazagran. Foam, crema extraction as at fair trade filter percolator. Robust seasonal kopi-luwak in iced fair trade redeye body. Coffee, beans breve, organic irish aroma single origin brewed.
+  </p>
 
-<p>
-Est dripper, white viennese foam grounds in half and half milk mazagran. Foam, crema extraction as at fair trade filter percolator. Robust seasonal kopi-luwak in iced fair trade redeye body. Coffee, beans breve, organic irish aroma single origin brewed.
-</p>
+  <p>
+    Beans chicory, in crema half and half a plunger pot milk. Redeye viennese as skinny ristretto robust kopi-luwak. Half and half, galão, at ut java dark fair trade aromatic redeye. Body macchiato in whipped, barista, flavour white, extraction fair trade affogato arabica mazagran.
+  </p>
 
-<p>
-Beans chicory, in crema half and half a plunger pot milk. Redeye viennese as skinny ristretto robust kopi-luwak. Half and half, galão, at ut java dark fair trade aromatic redeye. Body macchiato in whipped, barista, flavour white, extraction fair trade affogato arabica mazagran.
-</p>
+  <button type="button">Coffee Time!</button>
 
-<button type="button">Click Me!</button>
+  <! JS Below >
 
+  <script type="text/javascript">
+  $("button").bind("mousedown", function() { 
+    console.log("click")    
+      window.optimizely.push(["activate", 2781001235]);
+      var variationName = window.optimizely.variationNamesMap[2781001235];
 
-
-
-<script type="text/javascript">
-$("button").bind("mousedown", function() { 
-  console.log("click")    
-     window.optimizely.push(["activate", 2781001235]);
-    var variationName = window.optimizely.variationNamesMap[2781001235];
-    if (!variationName) {
-        console.log('Experiment is not set up correctly: ', 2781001235);
-    } else { 
-      console.log(variationName);
-
-    }
- });
-</script>
+      setTimeout(function(){ 
+        if (!variationName) {
+          console.log('Experiment is not set up correctly: ', 2781001235);
+        } else { 
+        console.log(variationName);
+        }
+          },
+        3000
+      );
+      
+   });
+  </script>
+</body>
